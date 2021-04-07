@@ -9,6 +9,6 @@ The board used is an ESP32 based TinyPico board by Seon Rozenblum (https://www.t
 
 The code may work with other boards, but it hasn't been tested on other boards. I would however make mention that it utilises two I2C buses, so the board would need to support two or more I2C buses.
 
-This code is the result of a calborative effort. While very little of the original example code I was provided was used, it was that example code that provided the insights to finally come up what you see here.
+This code is the result of a calborative effort. While I used very little of the original example code I was provided, it was that example code that provided the insights to finally come up what you see here.
 
-I would also like to thank some of the people on the SuperHouseTV Discord Server, without their code help, comments, encouragement, and general direction, this code may never of happened. In no particular order I would like to thank JamesKennewell, aitken85, Austins_Creations, Jon Oxer, Tinker and sumnerboy. I really hope I didn't forget anyone, and if I did I'm sorry.
+I would also like to thank some of the people on the SuperHouseTV Discord Server, without their code help, comments, encouragement, and general direction, this code may never of happened. In no particular order I would like to thank JamesKennewell, aitken85, Austins_Creations, Jon Oxer, Tinker, sarreck, and sumnerboy. I really hope I didn't forget anyone, and if I did I'm sorry.
