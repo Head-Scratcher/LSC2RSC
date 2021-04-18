@@ -1,3 +1,5 @@
+// This code tests just the i2crj45x24 button presses. It will illuminate the Arduino onboard LED while the button is pressed, and go off when released.
+
 #include <Wire.h>
 #include <Arduino.h>
 #include <Adafruit_MCP23017.h>
