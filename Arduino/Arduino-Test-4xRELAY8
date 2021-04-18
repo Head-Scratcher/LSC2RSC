@@ -1,7 +1,7 @@
 #include <Wire.h>
 #include <Arduino.h>
 #include <Adafruit_MCP23017.h>
-Adafruit_MCP23017 outMCPs[4];                                  // Adjust [4] according to how many RELAY8 shields you have on the Relay Shield Carrier
+Adafruit_MCP23017 outMCPs[4];                                   // Adjust [4] according to how many RELAY8 shields you have on the Relay Shield Carrier
 boolean relayState[32] = {false};
 byte binValue[4] = {0,0,0,0};
 int relayNumber[96] = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,1,2,3,4,5,6,7,8,9,10,11,12,13,14,
