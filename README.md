@@ -5,7 +5,7 @@ This code was written by Paul Murray to be used as "base code" to allow a SuperH
 to be used with a SuperHouse Relay Shield Carrier x4 (SKU: RSC - https://www.superhouse.tv/product/relay-shield-carrier-x4/) 
 and four SuperHouse 8-Channel Relay Driver Shield (SKU: RELAY8 - https://www.superhouse.tv/product/8-channel-relay-driver-shield/)
 
-The board used is an ESP32 based TinyPico board by Seon Rozenblum (https://www.tinypico.com/ - https://unexpectedmaker.com/)
+The board used is an ESP32 based TinyPICO board by Seon Rozenblum (https://www.tinypico.com/ - https://unexpectedmaker.com/)
 
 The code may work with other boards, but it hasn't been tested on other boards. I would however make mention that it utilises two I2C buses, so the board would need to support two or more I2C buses.
 
