@@ -1,1 +1,0 @@
-I've had a few electrical / code gremlins with the project of late, so I have created some simple test code to try out individual components of the project.
