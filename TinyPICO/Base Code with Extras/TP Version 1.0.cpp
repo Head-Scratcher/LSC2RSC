@@ -15,7 +15,7 @@
 #define SCL_2 32                                 // SCL on RSC
 #define DEBOUNCE_DURATION 25
 Adafruit_MCP23017 inMCPs[6]; Adafruit_MCP23017 outMCPs[4];
-boolean relayState[32]; boolean buttonState[96]; boolean testRelay = true;
+boolean relayState[32]; boolean buttonState[96]; boolean setRelay = true;
 byte binValue[4] = {0,0,0,0}; unsigned long timeStart = 0;
 
 /* ========================================================================= */
@@ -56,7 +56,7 @@ void decidePath(unsigned char inNum) {
 /* ========================================================================= */
 void loop() {
 
-  if (testRelay) { testRelay = false; for (unsigned char i = 0; i < 32; i++) { relayState[i] = false; } }
+  if (setRelay) { setRelay = false; for (unsigned char i = 0; i < 32; i++) { relayState[i] = false; } }
 
   unsigned char inNum = 0;                                  // Button number / index
   for (unsigned char i = 0; i < 6; i++) {                   // Outisde loop 0 to 5 (6)
