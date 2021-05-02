@@ -46,8 +46,8 @@ int relayNumber[96] = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,
 /* ========================================================================= */
 
 void loop()  
-{ // For relay module testing purposes only, will reset all relays in powerboard if connected!!!
-  // if (testRelay) { testRelay = false; delay(1000); for (unsigned char i = 1; i < 33; i++) { relay(i); delay(50); relay(i); } } 
+{
+  if (testRelay) { testRelay = false; for (unsigned char i = 0; i < 32; i++) { relayState[i] = false; } }
   
   int inNum = 1; unsigned long timeStart = 0;
   for (unsigned char i = 0; i < 6; i++) {
