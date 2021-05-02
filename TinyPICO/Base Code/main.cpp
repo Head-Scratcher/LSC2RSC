@@ -13,7 +13,7 @@
 
 TwoWire inBus = TwoWire(0); TwoWire outBus = TwoWire(1);
 Adafruit_MCP23017 inMCPs[6]; Adafruit_MCP23017 outMCPs[4];
-boolean relayState[32] = {false}; boolean FTT[96] = {true}; byte binValue[4] = {0,0,0,0}; boolean testRelay = true;
+boolean relayState[32] = {false}; boolean FTT[96] = {true}; byte binValue[4] = {0,0,0,0}; boolean setRelay = true;
 int relayNumber[96] = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,1,2,3,4,5,6,7,8,9,10,11,12,13,14,
 15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32};
 
@@ -47,7 +47,7 @@ int relayNumber[96] = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,
 
 void loop()  
 {
-  if (testRelay) { testRelay = false; for (unsigned char i = 0; i < 32; i++) { relayState[i] = false; } }
+  if (setRelay) { setRelay = false; for (unsigned char i = 0; i < 32; i++) { relayState[i] = false; } }
   
   int inNum = 1; unsigned long timeStart = 0;
   for (unsigned char i = 0; i < 6; i++) {
