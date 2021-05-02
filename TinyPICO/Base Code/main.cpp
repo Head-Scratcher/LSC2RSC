@@ -26,18 +26,18 @@ int relayNumber[96] = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,
 
     // Set Relay
     int relayBoardNumber = ceil(((int)outNum - 1) / 8); byte relayPinPosition = outNum - (relayBoardNumber * 8);
-    Serial.print("Relay Pin Number (Linear) = "); Serial.println(outNum);
-    Serial.print("Relay Board Number = "); Serial.println(relayBoardNumber + 1);
-    Serial.print("Relay Board Pin Position = "); Serial.println(relayPinPosition);
+    // Serial.print("Relay Pin Number (Linear) = "); Serial.println(outNum);
+    // Serial.print("Relay Board Number = "); Serial.println(relayBoardNumber + 1);
+    // Serial.print("Relay Board Pin Position = "); Serial.println(relayPinPosition);
     if (relayState[outNum]) { byte mask = 1 << (relayPinPosition - 1); binValue[relayBoardNumber] = binValue[relayBoardNumber] | mask; }
     else { byte mask = 255 - ( 1 << (relayPinPosition - 1)); binValue[relayBoardNumber] = binValue[relayBoardNumber] & mask; }
-    Serial.print("Binary Value = "); Serial.println(binValue[relayBoardNumber]);
+    // Serial.print("Binary Value = "); Serial.println(binValue[relayBoardNumber]);
 
     // Write Relay
     byte outHex[4] = { 0x20, 0x21, 0x22, 0x23 };
     outBus.beginTransmission(outHex[relayBoardNumber]);
-    Serial.print("Relay Board Address = "); Serial.println(outHex[relayBoardNumber]); 
-    Serial.println(" =================================== ");    
+    // Serial.print("Relay Board Address = "); Serial.println(outHex[relayBoardNumber]); 
+    // Serial.println(" =================================== ");    
     outBus.write(0x12);
     outBus.write(binValue[relayBoardNumber]);
     outBus.endTransmission();
@@ -45,9 +45,9 @@ int relayNumber[96] = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,
 
 /* ========================================================================= */
 
-void loop()  // For relay module testing purposes only, will reset all relays in powerboard if connected!!!
-{
-  if (testRelay) { testRelay = false; delay(1000); for (unsigned char i = 1; i < 33; i++) { relay(i); delay(50); relay(i); } } 
+void loop()  
+{ // For relay module testing purposes only, will reset all relays in powerboard if connected!!!
+  // if (testRelay) { testRelay = false; delay(1000); for (unsigned char i = 1; i < 33; i++) { relay(i); delay(50); relay(i); } } 
   
   int inNum = 1; unsigned long timeStart = 0;
   for (unsigned char i = 0; i < 6; i++) {
