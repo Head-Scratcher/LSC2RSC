@@ -22,3 +22,10 @@ Ohh and of course I accept no responsibility for the software, provided as is, e
 
 Regards,
 Paul
+
+EDIT: OK so looking through Discord conversations it was Lusu who provided me with a cut down alternative to the LSC_Input file. I went back and forth several times before ultimately deciding to use the USM_Input library, so while it didn't appear in the final code, I am extremely grateful for all the help Lusu provided.
+
+Just looking at who else I have had convesation with... Varying degrees of help, but I am sure all of the following have provided at least some help.
+Chris Aitken, Tinker, Austins_Creations, JamesKennewell, FrankMc, UnexpectedMaker, JonOxer.
+
+Still can't help but think I am missing a few...
