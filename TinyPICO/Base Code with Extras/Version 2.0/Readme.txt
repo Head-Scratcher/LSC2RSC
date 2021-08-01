@@ -10,11 +10,11 @@ One of the things I wanted to change over version 1.x was the reliance on the Ra
 
 The other major change in Version 2.0 is the software now leverages the USM_Input library whereas the previous versions used the LSC_Input library. What this does is opens up more ways to trigger the relays through different switch types. At the moment the software only takes input from Normally Open button switches, and Normally Closed reed switches like those used on windows and doors. I have left room in the code for expansion to other switch types should there be a need in the future.
 
-There are several major contributors to this software that I need to recognise. Some of these people offered help that may have been used at some point and subsequently removed, but they all contributed to the journey. I have no intentions of trying to remember all of them at the time of writing this Readme.txt, but I will add them as they identify themselves or I remember.
+There are several major contributors to this software that I need to recognise. Some of these people offered help that may have been used at some point and subsequently removed, but they all contributed to the journey, and I want to recognise them. I have no intentions of trying to remember all of them at the time of writing this Readme.txt, but I will add them as they identify themselves or I remember.
 
-So in no particular order I will start with sumnerboy and moin, whose biggest contribution comes in the form of the USM_Input library. I didn't really have time during its development to follow closely what they were doing, but I believe their work was based largely on someone else work, they made some significant and major changes to it. I am fairly sure that they mention who that is in their files.
+So in no particular order I will start with sumnerboy and moin, whose biggest contribution comes in the form of the USM_Input library. I didn't really have time during its development to follow closely what they were doing, but I believe their work was based largely on someone else work, who I am fairly sure that they mention who in their files, but their contribution made some significant and major changes to it, and you now have different switch types thanks to them. 
 
-Ordinarily I trim comments at the start of the file to get to the meat of the code sooner (an OCD thing), but I will add their files USM_Input.cpp and USM_Input.h exactly as they wrote them, so they can credit who they need to, and make sure I don't remove anything of importance.
+Ordinarily I trim comments at the start of the file to get to the meat of the code sooner (it's an OCD thing), but I will add their files USM_Input.cpp and USM_Input.h exactly as they wrote them, so they can credit who they need to, and make sure I don't remove anything of importance.
 
 I want to get these files uploaded, so watch this space for more names to appear, there are more people to credit.
 
