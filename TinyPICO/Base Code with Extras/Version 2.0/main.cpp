@@ -381,19 +381,29 @@ void setup()
       LCD_ADDRESS.setCursor(0,2); LCD_ADDRESS.print("    IN:             ");
       LCD_ADDRESS.setCursor(0,3); LCD_ADDRESS.print("   OUT:             ");
 
+      Serial.println(); Serial.println("      IN: ");
       for (uint8_t mcp = 0; mcp < 8; mcp++) {
         LCD_ADDRESS.setCursor(16,0); LCD_ADDRESS.print(IN_MCP_ADDRESS_Gc[mcp], HEX);
-        LCD_ADDRESS.setCursor(8 + mcp, 2); LCD_ADDRESS.write(valueIn[mcp]);
+        LCD_ADDRESS.setCursor(8 + mcp, 2); LCD_ADDRESS.write(valueIn[mcp]);        
+        Serial.print("0x"); Serial.print(IN_MCP_ADDRESS_Gc[mcp], HEX);
+        if (valueIn[mcp] == 255) { Serial.println(" = Present"); } else { Serial.println(" = Not Present"); }
         delay(100);
+      }
+
+      Serial.println(); Serial.println("     OUT: ");
+      for (uint8_t mcp = 0; mcp < 8; mcp++) {
         LCD_ADDRESS.setCursor(16,0); LCD_ADDRESS.print(OUT_MCP_ADDRESS_Gc[mcp], HEX);
-        LCD_ADDRESS.setCursor(8 + mcp, 3); LCD_ADDRESS.write(valueOut[mcp]);
+        LCD_ADDRESS.setCursor(8 + mcp, 3); LCD_ADDRESS.write(valueOut[mcp]);        
+        Serial.print("0x"); Serial.print(OUT_MCP_ADDRESS_Gc[mcp], HEX);
+        if (valueOut[mcp] == 255) { Serial.println(" = Present"); } else { Serial.println(" = Not Present"); }
         delay(100);
       }
       delay(500); LCD_ADDRESS.noBacklight(); LCD_ADDRESS.clear();
     }
   }
-  initialiseWatchdog(); 
-  Serial.println("Finished Setup()");
+
+  Serial.println(); initialiseWatchdog(); 
+  Serial.println("Finished Setup()"); Serial.println();
 }
 
 // ---------------------------------------------------------------------------------------------------------------------------------------------------
